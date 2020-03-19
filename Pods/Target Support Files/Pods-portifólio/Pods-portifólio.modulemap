@@ -1,0 +1,6 @@
+framework module Pods_portifo_lio {
+  umbrella header "Pods-portifólio-umbrella.h"
+
+  export *
+  module * { export * }
+}

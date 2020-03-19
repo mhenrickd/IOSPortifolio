@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +10,63 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="portifo_lio" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg2" translatesAutoresizingMaskIntoConstraints="NO" id="Plv-MJ-DTp">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" id="X1w-fL-LR6" customClass="iCarousel">
+                                <rect key="frame" x="34" y="119" width="307" height="488"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KHF-tb-ggi">
+                                        <rect key="frame" x="-37" y="-120" width="378" height="669"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="nrl-cL-CVZ">
+                                            <rect key="frame" x="0.0" y="0.0" width="378" height="669"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                        </view>
+                                        <blurEffect style="regular"/>
+                                    </visualEffectView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <viewLayoutGuide key="safeArea" id="9ba-bZ-T5D"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Portifólio do Matheus" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dtv-02-CwC">
+                                <rect key="frame" x="62.5" y="48" width="250" height="30"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Plv-MJ-DTp" secondAttribute="trailing" id="9Bk-8S-zd9"/>
+                            <constraint firstItem="X1w-fL-LR6" firstAttribute="top" secondItem="Dtv-02-CwC" secondAttribute="bottom" constant="41" id="G3o-xK-8de"/>
+                            <constraint firstItem="KHF-tb-ggi" firstAttribute="centerY" secondItem="Plv-MJ-DTp" secondAttribute="centerY" id="Sg8-W5-ba4"/>
+                            <constraint firstItem="Dtv-02-CwC" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="48" id="TGK-qd-Zei"/>
+                            <constraint firstItem="KHF-tb-ggi" firstAttribute="height" secondItem="Plv-MJ-DTp" secondAttribute="height" multiplier="0.191904" constant="541" id="YvB-UL-kf7"/>
+                            <constraint firstItem="KHF-tb-ggi" firstAttribute="centerX" secondItem="Plv-MJ-DTp" secondAttribute="centerX" constant="-1.5" id="eD4-vF-PXO"/>
+                            <constraint firstItem="Plv-MJ-DTp" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="hze-Sz-FYb"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Plv-MJ-DTp" secondAttribute="bottom" id="jJa-Px-dZm"/>
+                            <constraint firstItem="Plv-MJ-DTp" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="kfv-aN-IFm"/>
+                            <constraint firstItem="KHF-tb-ggi" firstAttribute="width" secondItem="Plv-MJ-DTp" secondAttribute="width" multiplier="0.64" constant="138" id="mCP-JP-hS6"/>
+                            <constraint firstItem="Dtv-02-CwC" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="pTZ-vI-sti"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="carousel" destination="X1w-fL-LR6" id="yuL-yX-5YQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="132" y="102.99850074962519"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="bg2" width="500" height="750"/>
+    </resources>
 </document>
